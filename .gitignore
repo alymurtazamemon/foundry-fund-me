@@ -1,4 +1,5 @@
 # Compiler files
+node_modules/
 cache/
 out/
 
@@ -12,3 +13,6 @@ docs/
 
 # Dotenv file
 .env
+
+# .lock file
+package-lock.json
