@@ -1,1 +1,2 @@
+forge-std/=lib/forge-std/
 @chainlink/contracts/=node_modules/@chainlink/contracts/
