@@ -1,0 +1,36 @@
+{
+  "transactions": [
+    {
+      "hash": "0xc2e2b52d5802406f1102a27eeea419191f911aca5c38b14c30750043a850b4b7",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x9660e111e09e2400afBe5c39aBc3c01B05011391",
+      "function": null,
+      "arguments": null,
+      "rpc": "https://eth-sepolia.g.alchemy.com/v2/6UfFLip1T9Giu5b3kpCG_Nii7iSCAAzn",
+      "transaction": {
+        "type": "0x02",
+        "from": "0x1ef4c1db7c299c9b5248da1ff8e4805fd6f4d4d1",
+        "to": "0x9660e111e09e2400afbe5c39abc3c01b05011391",
+        "gas": "0x19612",
+        "value": "0x16345785d8a0000",
+        "data": "0xb60d4288",
+        "nonce": "0xd0",
+        "accessList": []
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0xc2e2b52d5802406f1102a27eeea419191f911aca5c38b14c30750043a850b4b7"
+  ],
+  "path": "/Users/alymurtazamemon/Desktop/Blockchain/my-projects/practice/foundry-fund-me/broadcast/Fund.s.sol/11155111/run-latest.json",
+  "returns": {},
+  "timestamp": 1685279043,
+  "chain": 11155111,
+  "multi": false,
+  "commit": "baac9d5"
+}
