@@ -18,7 +18,7 @@ contract Withdraw is Script {
 
     function run() external {
         vm.startBroadcast();
-        FundMe(mostRecentlyDeployedAddress).cheaperWithdraw();
+        FundMe(mostRecentlyDeployedAddress).withdraw();
         vm.stopBroadcast();
         console.log("Withdraw FundMe balance!");
     }

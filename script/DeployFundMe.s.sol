@@ -6,16 +6,13 @@ import "./HelperConfig.s.sol";
 import "../src/FundMe.sol";
 
 contract DeployFundMe is Script {
-    address priceFeed;
-
-    function setUp() public {
+    function run() public returns (FundMe, HelperConfig) {
         HelperConfig helperConfig = new HelperConfig(); // This comes with our mocks!
-        priceFeed = helperConfig.activeNetworkConfig();
-    }
+        address priceFeed = helperConfig.activeNetworkConfig();
 
-    function run() public {
         vm.startBroadcast();
-        new FundMe(priceFeed);
+        FundMe fundMe = new FundMe(priceFeed);
         vm.stopBroadcast();
+        return (fundMe, helperConfig);
     }
 }
