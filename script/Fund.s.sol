@@ -3,9 +3,11 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Script.sol";
 import "../src/FundMe.sol";
+import {DevOpsTools} from "foundry-devops/src/DevOpsTools.sol";
 
 contract Fund is Script {
     uint256 SEND_VALUE = 0.1 ether;
+    // * this variable will get the address manual way.
     address mostRecentlyDeployedAddress;
 
     function setUp() public {
@@ -17,8 +19,12 @@ contract Fund is Script {
     }
 
     function run() external {
+        address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment(
+            "FundMe",
+            block.chainid
+        );
         vm.startBroadcast();
-        FundMe(mostRecentlyDeployedAddress).fund{value: SEND_VALUE}();
+        FundMe(mostRecentlyDeployed).fund{value: SEND_VALUE}();
         vm.stopBroadcast();
         console.log("Funded FundMe with %s", SEND_VALUE);
     }
